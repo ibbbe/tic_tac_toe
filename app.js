@@ -1,8 +1,5 @@
-function GameBoard () {
-
-    const gameBoard = new Array(9).fill('');
-    console.log(gameBoard);
+// make game board 
+function GameBoard() {
+    const board = new Array(9).fill("");
+    return { board };
 }
-
-GameBoard()
-
