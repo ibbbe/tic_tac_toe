@@ -16,3 +16,23 @@ const Player = () => {
     }
     return { player1, player2 }
 }
+
+// function to play game in console
+function markField(field) {
+
+    //get players
+    const { player1, player2 } = Player();
+
+    // set active player marker
+    marker = marker === player2.marker ? player1.marker : player2.marker;
+
+    // check and mark field on the board
+    if (board[field] === '') {
+        board[field] = marker;
+        checkWin(board);
+    } else {
+        console.log("Mark another field this is marked");
+        marker = marker === player2.marker ? player1.marker : player2.marker;
+    }
+    return marker;
+}
