@@ -42,12 +42,12 @@ function markField(field) {
     return marker;
 }
 
-// check win and draw
+// check Game status
 const checkWin = (board) => {
 
     const [a, b, c, d, e, f, g, h, i] = board;
-    
-    //checkWin 
+
+    //check win 
     if (a === b && b === c && a !== '' ||
         d === e && e === f && d !== '' ||
         g === h && h === i && g !== '' ||
@@ -64,6 +64,7 @@ const checkWin = (board) => {
         }
         GameBoard();
         return;
+        // check draw
     } else if
         (a !== '' && b !== '' && c !== '' && d !== '' && e !== '' && f !== '' && g !== '' && h !== '' && i !== '') {
         console.log("It is a draw");
