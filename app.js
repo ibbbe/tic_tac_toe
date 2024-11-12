@@ -41,3 +41,33 @@ function markField(field) {
     }
     return marker;
 }
+
+// check win and draw
+const checkWin = (board) => {
+
+    const [a, b, c, d, e, f, g, h, i] = board;
+    
+    //checkWin 
+    if (a === b && b === c && a !== '' ||
+        d === e && e === f && d !== '' ||
+        g === h && h === i && g !== '' ||
+        a === d && d === g && a !== '' ||
+        b === e && e === h && b !== '' ||
+        c === f && f === i && c !== '' ||
+        a === e && e === i && a !== '' ||
+        c === e && e === g && c !== ''
+    ) {
+        if (marker === 'O') {
+            console.log('Player2 wins');
+        } else {
+            console.log('Player1 wins!');
+        }
+        GameBoard();
+        return;
+    } else if
+        (a !== '' && b !== '' && c !== '' && d !== '' && e !== '' && f !== '' && g !== '' && h !== '' && i !== '') {
+        console.log("It is a draw");
+        GameBoard();
+        return
+    }
+}
