@@ -1,3 +1,8 @@
+// set global variables to track the board and player turn
+const { board } = GameBoard();
+let marker = 'O';
+
+
 // make game board 
 function GameBoard() {
     const board = new Array(9).fill("");
